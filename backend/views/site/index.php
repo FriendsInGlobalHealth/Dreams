@@ -377,13 +377,14 @@ if((int)$core->id<10) { echo "B0".(int)$core->id.','; } else { echo "B".(int)$co
                       $cliServices=0;
                       foreach ($cliservicos as $core) {
 
-                      echo  $cliServices = $cliServices+ServicosBeneficiados::find()
+                      //Ajuste par rodar no php7.2 conversao para inteiro - Gerzelio Saide
+                      echo  $cliServices = $cliServices+intval(ServicosBeneficiados::find()
                       //   ->where(['=','beneficiario_id',$model->member_id])
                          ->andWhere(['=', 'servico_id', $core->id])
                          ->andWhere(['=', 'status', 1])
 
                          ->select('servico_id')->distinct()
-                         ->count().',';
+                         ->count().',');
                     }
                       ?>
 

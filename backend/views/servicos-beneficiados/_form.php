@@ -29,7 +29,7 @@ use kartik\daterange\DateRangePicker;
 <div class="row"> 
 <div class="col-lg-12"> 
  <?php 
-if(isset($_REQUEST['id'])) {$_REQUEST['m']=filter_var($_REQUEST['id'], FILTER_SANITIZE_NUMBER_INT);}
+//if(isset($_REQUEST['id'])) {$_REQUEST['m']=filter_var($_REQUEST['id'], FILTER_SANITIZE_NUMBER_INT);}
 if(isset($_REQUEST['m'])&&$_REQUEST['m']>0) {
 
 	$idb=filter_var($_REQUEST['m'], FILTER_SANITIZE_NUMBER_INT);
@@ -182,7 +182,7 @@ if (isset($_REQUEST['ts'])&&($_REQUEST['ts']>0)) {echo Html::activeDropDownList(
           <?= Html::submitButton($model->isNewRecord ? 'Atender' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     <?php } else { ?>
         <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-		<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <?= Html::a('<i class="glyphicon glyphicon-backward"></i>', ['index'], ['class' => 'btn btn-warning']) ?> 
 <?php }?> 
     </div>
 </div>
