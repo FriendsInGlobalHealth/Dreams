@@ -7,7 +7,7 @@
     Para p yii_env colegue: 'prod' e 'dev' dependedo da sircustancia a cima.
 */
 
-defined('YII_DEBUG') or define('YII_DEBUG',1);
+defined('YII_DEBUG') or define('YII_DEBUG',0);
 defined('YII_ENV') or define('YII_ENV', 'prod');
 
 require(__DIR__ . '/../../vendor/autoload.php');

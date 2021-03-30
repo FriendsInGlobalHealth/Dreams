@@ -46,7 +46,7 @@ final class Versions
   'bower-asset/yii2-pjax' => '2.0.7.1@aef7b953107264f00234902a3880eb50dafc48be',
   'cebe/markdown' => '1.2.1@9bac5e971dd391e2802dca5400bbeacbaea9eb86',
   'composer/package-versions-deprecated' => '1.11.99.1@7413f0b55a051e89485c5cb9f765fe24bb02a7b6',
-  'dektrium/yii2-user' => '0.9.14@8f2daea532f7efefc3f808e50d74a91c0de71ff4',
+  'dektrium/yii2-user' => 'dev-master@761ae89f188bfa87eb72a9d5fe0cff015a9451e1',
   'doctrine/inflector' => 'v1.2.0@e11d84c6e018beedd929cff5220969a3c6d1d462',
   'doctrine/lexer' => '1.0.2@1febd6c3ef84253d7c815bed85fc622ad207a9f8',
   'egulias/email-validator' => '2.1.25@0dbf5d78455d4d6a41d186da50adc1122ec066f4',
@@ -68,7 +68,7 @@ final class Versions
   'kartik-v/bootstrap-star-rating' => 'v4.0.6@cb449271f24c78ab54726232daf5b9dae3e49dbd',
   'kartik-v/dependent-dropdown' => 'v1.4.9@54a8806002ee21b744508a2edb95ed01d35c6cf9',
   'kartik-v/yii2-bootstrap4-dropdown' => 'v1.0.1@394cb4f85d82522ec5918f1581bdad518b324498',
-  'kartik-v/yii2-date-range' => 'v1.7.2@fbc192c685c3c529a399d9a388036d08985401a6',
+  'kartik-v/yii2-date-range' => 'dev-master@22617574272ba01750428bbdf5f42c23bdc8387e',
   'kartik-v/yii2-dialog' => 'v1.0.5@c38616d719f52530749457c022ca6134d0ad31ce',
   'kartik-v/yii2-field-range' => 'v1.3.5@8a18edb343b3beb96ddc86e4a06aee28be160787',
   'kartik-v/yii2-grid' => 'v3.3.5@e4ba0c68ecb864e1a158f16cc73a5e73a6cdf7c7',
@@ -163,7 +163,7 @@ final class Versions
   'yiisoft/yii2-debug' => '2.1.16@0d8ce76b2dd036a5fc38b26434e1c672ad8975a9',
   'yiisoft/yii2-faker' => '2.0.5@8c361657143bfaea58ff7dcc9bf51f1991a46f5d',
   'yiisoft/yii2-gii' => '2.2.1@f3bb400b578b0a0ee737d267ebaffdaad7b32dee',
-  'yiisoft/yii2-app-advanced' => 'dev-master@40abac83657910483a5520812e7ba0da87c2d7fd',
+  'yiisoft/yii2-app-advanced' => 'dev-master@f7ae43ab5df60c28506e196af0c8fc0a056e98bf',
 );
 
     private function __construct()
