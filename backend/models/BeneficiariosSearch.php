@@ -24,7 +24,7 @@ class BeneficiariosSearch extends Beneficiarios
             [['id', 'emp_number','parceiro_id', 'membro_zona', 'membro_circulo','us_id', 'membro_celula', 'membro_localidade_id', 'emp_smoker', 'nation_code', 'emp_gender', 'emp_status', 'job_title_code', 'eeo_cat_code', 'work_station', 'termination_id', 'criado_por', 'actualizado_por','ponto_entrada'], 'integer'],
             [['member_id', 
 'emp_lastname', 'emp_firstname','criado_em', 'emp_middle_name', 'emp_nick_name', 'membro_data_admissao', 'membro_caratao_eleitor', 'membro_cargo_partido_id', 'ethnic_race_code', 'emp_birthday', 'emp_marital_status', 'emp_ssn_num', 'emp_sin_num', 'emp_other_id', 'emp_dri_lice_num', 'emp_dri_lice_exp_date', 'emp_military_service', 'emp_street1', 'emp_street2', 'city_code', 'coun_code', 'provin_code', 'district_code', 'emp_zipcode', 'emp_hm_telephone', 'emp_mobile', 'emp_work_telephone', 'emp_work_email', 'sal_grd_code', 'joined_date', 'emp_oth_email', 'bi', 'nuit', 'passaporte', 'dire', 'bi_data_i', 'bi_data_f', 'custom3', 'other_prof_info', 'nuit_data_i', 'nuit_data_f', 'custom7', 'custom8', 'custom9', 'custom10', 'criado_em', 'actualizado_em', 'user_location', 'user_location2','deficiencia_tipo','idade_anos','estudante','estudante_classe','estudante_escola','gravida','filhos','bairro_id','encarregado_educacao',
-'deficiencia','house_sustainer','married_before','pregant_or_breastfeed','employed','tested_hiv','vbg_exploracao_sexual','vbg_migrante_trafico','vbg_sexual_activa','vbg_relacao_multipla','vbg_vitima','vbg_vitima_trafico'], 'safe'],
+'deficiencia','house_sustainer','married_before','pregant_or_breastfeed','employed','tested_hiv','vbg_exploracao_sexual','vbg_migrante_trafico','vbg_sexual_activa','vbg_relacao_multipla','vbg_vitima','vbg_vitima_trafico','alcohol_drugs_use','sti_history'], 'safe'],
         ];
     }
 
@@ -121,6 +121,8 @@ $query = Beneficiarios::find()->where(['emp_status'=>1]);
             'gravida'=>$this->gravida,
             'filhos'=>$this->filhos,
 	    'parceiro_id'=>$this->parceiro_id,
+        'alcohol_drugs_use'=>$this->alcohol_drugs_use,
+        'sti_history'=>$this->sti_history,
         ]);
 
         $query->andFilterWhere(['like', 'member_id', $this->member_id])
@@ -186,7 +188,10 @@ $query = Beneficiarios::find()->where(['emp_status'=>1]);
 	   
 	    ->andFilterWhere(['like', 'criado_em', $this->criado_em])
             ->andFilterWhere(['like', 'user_location', $this->user_location])
-            ->andFilterWhere(['like', 'user_location2', $this->user_location2]);
+            ->andFilterWhere(['like', 'user_location2', $this->user_location2])
+
+            ->andFilterWhere(['like', 'alcohol_drugs_use', $this->alcohol_drugs_use])
+            ->andFilterWhere(['like', 'sti_history', $this->sti_history]);
 
         return $dataProvider;
     }
